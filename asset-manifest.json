@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/chess_react/static/css/main.c3866833.css",
+    "main.js": "/chess_react/static/js/main.def1bc1e.js",
+    "static/js/787.45967197.chunk.js": "/chess_react/static/js/787.45967197.chunk.js",
+    "index.html": "/chess_react/index.html",
+    "main.c3866833.css.map": "/chess_react/static/css/main.c3866833.css.map",
+    "main.def1bc1e.js.map": "/chess_react/static/js/main.def1bc1e.js.map",
+    "787.45967197.chunk.js.map": "/chess_react/static/js/787.45967197.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c3866833.css",
+    "static/js/main.def1bc1e.js"
+  ]
+}
