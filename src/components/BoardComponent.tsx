@@ -1,6 +1,7 @@
-import React, { FC } from 'react';
+import React, { FC, useState } from 'react';
 import { Board } from '../models/Board';
 import CellComponent from './CellComponent';
+import { Cell } from '../models/Cell';
 
 interface BoardProps {
     board: Board;
@@ -8,6 +9,12 @@ interface BoardProps {
 }
 
 const BoardComponent: FC<BoardProps> = ({board: Board, setBoard}) => {
+    const [selectedCell, setSelectedCell] = useState<Cell | null>(null);
+
+    function click(cell: Cell) {
+        setSelectedCell(cell);
+    }
+
     return (
         <div
             className='board'
@@ -16,8 +23,10 @@ const BoardComponent: FC<BoardProps> = ({board: Board, setBoard}) => {
                 <React.Fragment key={index}>
                     {row.map(cell => 
                         <CellComponent
+                            click={click}
                             cell={cell}
                             key={cell.id}
+                            selected={cell.x === selectedCell?.x && cell.y === selectedCell?.y}
                         />
                     )}
                 </React.Fragment>
