@@ -25,14 +25,16 @@ export class Figure {
         this.cell.figure = this;
         this.logo = null;
         this.name = FigureNames.FIGURE;
-        this.id = Math.random(); 
+        this.id = Math.random();
     }
 
-    canMove(target: Cell) : boolean {
+    canMove(target: Cell): boolean {
+        if (target.figure?.color === this.color)
+            return false
+        if (target.figure?.name === FigureNames.KING)
+            return false
         return true;
     }
 
-    moveFigure(target: Cell) {
-        
-    }
+    moveFigure(target: Cell) { }
 }
